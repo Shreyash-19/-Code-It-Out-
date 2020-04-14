@@ -1,0 +1,19 @@
+//PROBLEM NAME:Even and Odds
+ //PROBLEM LINK:https://codeforces.com/problemset/problem/318/A
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+long long int n,k,p,i,j;
+cin>>n>>k;
+if(n%2==0)
+{p=n/2;}
+else 
+{p=(n+1)/2;}
+if(k<=p)
+{cout<<(2*k)-1<<endl;}
+else
+{i=k-p;
+cout<<(2*i)<<endl;}
+return 0;}
