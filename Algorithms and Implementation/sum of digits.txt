@@ -1,0 +1,56 @@
+//Problem Name:sum of digits
+//problem link:https://codeforces.com/contest/102/problem/B
+
+
+#include <bits/stdc++.h>
+using namespace std; 
+int main() {
+	int i,j=0,sum=0,count=0,total=0,f=0,summation=0,l,u,y;
+	string s;
+		cin>>s;
+	if(s.length()==1)
+	{cout<<0<<endl;}
+	else{
+	for(i=0;i<s.length();i++)
+	{s[i]=s[i]-'0';
+	count=count+s[i];}
+
+	if(count%10==count)
+	{f=1;
+		cout<<1<<endl;
+	}
+
+	if(f==0)
+	{l=log10(count)+1;
+		long long	int arr1[l];
+		for(i=l-1;i>=0;i--)
+		{arr1[i]=count%10;
+		count=count/10;
+		sum=sum+arr1[i];}
+		if(sum%10==sum)
+		{f=1;
+		cout<<2<<endl;}}
+	
+		if(f==0)
+		{u=log10(sum)+1;
+		long long 	int arr2[u];
+		for(i=u-1;i>=0;i--)
+		{arr2[i]=sum%10;
+		sum=sum/10;
+		total=total+arr2[i];}
+		if(total%10==total)
+	{	f=1;
+		cout<<3<<endl;}}
+
+		if(f==0)
+		{y=log10(total)+1;
+		
+long long int arr3[y];
+		for(i=y-1;i>=0;i--)
+		{arr3[i]=total%10;
+		total=total/10;
+		summation=summation+arr3[i];
+		}
+		if(summation%10==summation)
+		{cout<<4<<endl;}}}
+	return 0;}
